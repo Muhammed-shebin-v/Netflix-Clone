@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:netflix_clone/screens/home_screen.dart';
+import 'package:netflix_clone/screens/more_screen.dart';
 import 'package:netflix_clone/screens/splash_screen.dart';
+import 'package:netflix_clone/widgets/bottomnavbar.dart';
 
 void main(){
   runApp(
