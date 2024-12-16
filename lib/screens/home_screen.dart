@@ -42,9 +42,10 @@ class _HomeScreenState extends State<HomeScreen> {
               padding: const EdgeInsets.only(right: 20.0),
               child: IconButton(
                   onPressed: () {
-                   
-                                Navigator.push(context, MaterialPageRoute(builder: (context)=> SearchScreen())); 
-                            
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const SearchScreen()));
                   },
                   icon: const Icon(
                     Icons.search,
@@ -82,7 +83,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     future: nowplayingFuture,
                     headLineText: 'Now Playing Movies'),
               ),
-              SizedBox(height: 20,),
+              const SizedBox(
+                height: 20,
+              ),
               SizedBox(
                 height: 210,
                 child: movieCardWidget(

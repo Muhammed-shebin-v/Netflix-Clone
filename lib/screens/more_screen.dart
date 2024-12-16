@@ -39,28 +39,9 @@ padding: EdgeInsets.only(right: 20.0),
             ),
             
         ],
-        // bottom: TabBar(
-
-        //   dividerColor:Colors.black,
-        //   isScrollable: false,
-        //   indicator:BoxDecoration(
-        //     borderRadius: BorderRadius.circular(20),
-        //     color: Colors.white
-        //   ) ,
-        //   labelColor: Colors.black,
-        //   labelStyle: TextStyle(
-        //     fontWeight: FontWeight.bold,
-        //     fontSize: 14,
-        //   ),
-        //   unselectedLabelColor: Colors.white,
-        //   tabs: const [
-        //   Tab(text:"🍿 coming soon"),
-        //   Tab(text: "❤️‍🔥 Everyone's watching")
-        // ]
-        // ),
       ),
       body:
-        SingleChildScrollView(
+        const SingleChildScrollView(
           child: Column(
           
             children: [
