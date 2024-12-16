@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:netflix_clone/common/utils.dart';
 import 'package:netflix_clone/models/upcoming_model.dart';
+import 'package:netflix_clone/screens/movie_details_screen.dart';
 
 class movieCardWidget extends StatelessWidget {
   final Future<UpcomingMovieModel> future;
@@ -35,12 +36,17 @@ class movieCardWidget extends StatelessWidget {
                   shrinkWrap: true,
                   itemBuilder: (context,index){
                   return 
-                  Container(
-                    padding: EdgeInsets.all(5),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20)
+                  InkWell(
+                    onTap: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=> MovieDetailsScreen(movieid: data[index].id))); 
+                              },
+                    child: Container(
+                      padding: EdgeInsets.all(5),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20)
+                      ),
+                      child: Image.network('$imageUrl${data[index].posterPath}',),
                     ),
-                    child: Image.network('$imageUrl${data[index].posterPath}',),
                   );
                 }),
               )
